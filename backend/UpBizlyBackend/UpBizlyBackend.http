@@ -1,0 +1,6 @@
+@UpBizlyBackend_HostAddress = http://localhost:5131
+
+GET {{UpBizlyBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
