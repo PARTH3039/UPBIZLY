@@ -1,0 +1,78 @@
+# UpBizly
+
+**UpBizly** is a digital platform designed for small businesses to manage their products, view analytics, and improve their digital presence. Built with a modern full-stack approach, it includes user authentication, business & product management, and a responsive frontend.
+
+---
+
+## 🚀 Project Overview
+
+- **Goal:** Provide small businesses with a platform to manage products, view analytics, and interact digitally.
+- **Tech Stack:**
+  - **Backend:** C#, .NET Core, ASP.NET Web API, SQL Server (Docker)
+  - **Frontend:** React + TailwindCSS (or simple CSS)
+  - **Authentication:** JWT + bcrypt password hashing
+  - **Database:** SQL Server (Docker)
+  - **Deployment:** Render.com / Azure free tier
+
+---
+
+## 📝 Features
+
+### Core Features
+- **User Authentication**
+  - Register / Login
+  - JWT token for session management
+  - Role-based access: Admin vs Business User
+
+- **Business Management**
+  - Add, edit, delete businesses (Admin)
+  - Link businesses to users (OwnerId)
+
+- **Product Management**
+  - Add, edit, delete products
+  - Link products to businesses
+  - Filter, search, and sort products
+
+- **Dashboard**
+  - Basic analytics: total businesses, total products
+  - Optional: sample revenue per business
+
+- **Sample Data**
+  - Preloaded businesses and products to demonstrate functionality
+
+### Optional / Bonus Features
+- Form validation (React + backend)
+- Unit testing (frontend & backend)
+- Simple analytics charts
+- Role-based access control
+
+---
+
+## 🛠️ Backend (ASP.NET Core API)
+
+### Steps
+1. Create a new ASP.NET Core Web API project.
+2. Install NuGet packages:
+   - `Microsoft.EntityFrameworkCore.SqlServer`
+   - `Microsoft.EntityFrameworkCore.Tools`
+   - `BCrypt.Net-Next` (password hashing)
+   - `System.IdentityModel.Tokens.Jwt` (JWT)
+3. Create Models:
+   - `User`, `Business`, `Product`
+4. Configure `DbContext` and SQL Server connection.
+5. Configure JWT authentication in `Program.cs`.
+6. Create Controllers:
+   - `AuthController` (Register/Login)
+   - `BusinessesController` (CRUD)
+   - `ProductsController` (CRUD + filter/search)
+7. Seed database with sample data.
+8. Test API endpoints using Postman.
+
+---
+
+## 🌐 Frontend (React)
+
+### Steps
+1. Create React app:
+   ```bash
+   npx create-react-app upbizly-frontend
