@@ -1,0 +1,3 @@
+use 
+id : admin
+password: Admin@123 for testing the app. 
